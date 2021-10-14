@@ -1,3 +1,5 @@
-# Desafío 2
+# Desafío 3
 
-Creación del Nav Bar utilizando Bootstrap
+-ItemListContainer.js
+-CartWidget.js
+Utilizacíon de ícono Cart de Font Awesome
