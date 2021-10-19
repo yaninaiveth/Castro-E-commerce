@@ -1,3 +1,3 @@
-# Desafío 2
+# Desafío 4
 
-Creación del Nav Bar utilizando Bootstrap
+Creación del componente ItemCount  
