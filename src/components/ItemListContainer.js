@@ -1,15 +1,15 @@
 import React from 'react';
+import Promises from './Promises';
+import { products } from '../data/products';
 
-export const ItemListContainer = ({items, greeting}) => {
+export const ItemListContainer = ({ greeting }) => {
+
     return (
         <>
             <h1>{greeting}</h1>
             <h2>Artículos</h2>
-            <ul>
-                {items.map((items)=>(
-                    <li>Articulo {items}</li>
-                ))}
-            </ul>
+            <Promises products = { products }/>
+
         </>
-    )
-}
+    );
+};

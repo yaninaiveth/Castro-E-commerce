@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Router>
         <NavBar/>
-        <ItemListContainer items = { [1,2,3,4,5,6,7,8,9,10] } greeting = "Bienvenido a mi Tienda"/>
-        <ItemCount initial = "0" onAdd = {() => alert("Alert")} stock = "5"/>
+        <ItemListContainer greeting = "Bienvenido a mi Tienda"/>
+        <ItemCount initial = {0} onAdd = {() => alert("Alert")} stock = {5}/>
       </Router>
     </div>
   );
