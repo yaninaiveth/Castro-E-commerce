@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { promises } from './helpers/promises';
 import ItemList from './ItemList';
 
 const Promises = ({products}) => {
@@ -8,7 +9,7 @@ const Promises = ({products}) => {
     const [currentProducts, setCurrentProducts] = useState([]);
 
 
-    const productResponse = new Promise ((resolve, reject) =>{
+    /*const productResponse = new Promise ((resolve, reject) =>{
        setTimeout(() => {
            resolve (products);
         }, 3000);
@@ -27,15 +28,19 @@ const Promises = ({products}) => {
                 setMessage(`Result is correct ${result}`);
                 setIsSucces(true);
             }
-        ) */
+        ) 
 
         .catch((error)=>{
             console.log(`Error in progress ${error}`); 
-        })
+        })*/
             
-        .finally(()=>{   
+        /*.finally(()=>{   
             setIsLoading(false);
-        });
+        });*/
+
+        useEffect(() => {
+          if(products) promises(products, setIsLoading, setCurrentProducts);
+        }, [products])
 
     return (
         <div>
