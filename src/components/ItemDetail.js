@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemDetail = ({id, title, description, price, pictureUrl}) => {
+const ItemDetail = ({title, description, pictureUrl}) => {
     return (
 
         <div style = {{display:"inline-block"}}>
