@@ -3,7 +3,7 @@ import ItemDetail from './ItemDetail';
 import { prod } from '../data/product';
 import { promises } from './helpers/promises';
 
-const ItemListDetail = () => {
+const ItemDetailContainer = () => {
 
     console.log(prod);
 
@@ -11,7 +11,7 @@ const ItemListDetail = () => {
     const [currentProducts, setCurrentProducts] = useState({});
 
     const getItem = () => {
-        if (prod) promises(prod, setCurrentProducts, setIsLoading);
+        if (prod) promises(prod, setIsLoading, setCurrentProducts);
     };
     
     useEffect(() => {
@@ -22,11 +22,11 @@ const ItemListDetail = () => {
 
     return (
         <div>
-            <h1>Item List Detail</h1>
+            <h1>Item Detail Container</h1>
             {isLoading && <h4>Cargando...</h4>}
-            <ItemDetail currentProducts = {currentProducts}/>
+            <ItemDetail {...currentProducts}/>
         </div>
     )
 }
 
-export default ItemListDetail
+export default ItemDetailContainer

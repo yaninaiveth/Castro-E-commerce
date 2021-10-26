@@ -3,7 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import ItemCount from './components/ItemCount'
-import ItemListDetail from './components/ItemListDetail';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Router>
         <NavBar/>
         <ItemListContainer greeting = "Bienvenido a mi Tienda"/>
-        <ItemListDetail/>
+        <ItemDetailContainer/>
         <ItemCount initial = {0} onAdd = {() => alert("Alert")} stock = {5}/>
       </Router>
     </div>
