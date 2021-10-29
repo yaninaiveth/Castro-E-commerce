@@ -3,7 +3,7 @@ export const promises = (products, setIsLoading, setCurrentProducts) => {
     const productResponse = new Promise ((resolve, reject) =>{
         setTimeout(() => {
             resolve (products);
-         }, 3000);
+         }, 2000);
  
      });
      
