@@ -9,6 +9,7 @@ const ItemDetailContainer = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [currentProducts, setCurrentProducts] = useState({});
+    const [count, setCount] = useState(0);
 
     const getItem = () => {
         if (prod) promises(prod, setIsLoading, setCurrentProducts);
@@ -24,7 +25,7 @@ const ItemDetailContainer = () => {
         <div>
             <h1>Item Detail Container</h1>
             {isLoading && <h4>Cargando...</h4>}
-            <ItemDetail {...currentProducts}/>
+            <ItemDetail count={count} setCount={setCount} {...currentProducts}/>
         </div>
     )
 }

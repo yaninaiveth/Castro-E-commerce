@@ -4,11 +4,11 @@ function ItemCount({ count, setCount, stock}){
 
 
     const increment = (count) =>{
-        if  (count < stock) setCount (count = count + 1);
+        if  (count < stock) setCount (count + 1);
     }
 
     const decrement = (count) => {
-            if ((count > 0) || (count === 1)) setCount(count = count - 1);
+            if ((count > 0) || (count === 1)) setCount(count - 1);
       }
 
     return (
