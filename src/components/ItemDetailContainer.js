@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <h1>Item Detail Container</h1>
+            <h2>Item Detail Container</h2>
             {isLoading && <h4>Cargando...</h4>}
             <ItemDetail count={count} setCount={setCount} {...currentProducts}/>
         </div>
