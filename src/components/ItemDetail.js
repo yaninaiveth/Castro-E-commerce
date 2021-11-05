@@ -1,19 +1,22 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
-const ItemDetail = ({title, description, pictureUrl, count, setCount}) => {
+const ItemDetail = ({id, title, description, pictureUrl, count, setCount}) => {
 
     const [show, setShow] = useState(false)
-
+    const { addItem } = useContext(CartContext)
  
     const onAdd = () =>{
         if (count > 0) {
             setShow(true);
-
-            console.log("entra al if")
         }
+
+        const item = {id,title, description, pictureUrl}
+        addItem(item, count);
+        
     } 
 
 
