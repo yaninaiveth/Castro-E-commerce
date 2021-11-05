@@ -33,7 +33,7 @@ export const CartProvider = ({defaultValue=[], children}) => {
 
         console.log("Borrando item")
         const newCart = cart.filter( item => item.id !== item.id)
-
+        setCart(newCart)
     }
 
     const clear = () => {
