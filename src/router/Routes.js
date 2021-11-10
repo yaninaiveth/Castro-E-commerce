@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar';
 import { ItemListContainer } from '../components/ItemListContainer';
 import ItemDetailContainer from '../components/ItemDetailContainer';
 import NotFound from '../layout/not-found/NotFound';
-import CartContainer from '../layout/cart-container/CartContainer';
+import Cart from '../layout/cart-container/Cart';
 import Burger from '../layout/product-layout/Burger';
 import Pizza from '../layout/product-layout/Pizza';
 
@@ -21,7 +21,7 @@ const Routes = () => {
                         <ItemDetailContainer/>
                     </Route>
                     <Route path="/cart">
-                        <CartContainer/>
+                        <Cart/>
                     </Route>
                     <Route path="/burger">
                         <Burger/>
